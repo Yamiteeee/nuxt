@@ -3,7 +3,7 @@
   <section id="pricing" :class="$style.pricingSection">
     <div :class="$style.container">
       <!-- Section Header -->
-      <div :class="$style.headerGroup">
+      <div :class="$style.headerGroup" data-aos="fade-up">
         <h2 :class="$style.sectionTitle">Simple Local Pricing</h2>
         <p :class="$style.sectionSubtitle">
           Start 100% free with no credit card required. Upgrade as your business
@@ -14,7 +14,11 @@
       <!-- Pricing Cards Grid -->
       <div :class="$style.pricingGrid">
         <!-- Free Tier -->
-        <div :class="[$style.card, $style.pricingCard]">
+        <div
+          :class="[$style.card, $style.pricingCard]"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div>
             <div :class="$style.tierBadge">Free Starter</div>
             <div :class="$style.price">
@@ -49,7 +53,11 @@
         </div>
 
         <!-- Pro Tier -->
-        <div :class="[$style.card, $style.pricingCard, $style.pricingCardPro]">
+        <div
+          :class="[$style.card, $style.pricingCard, $style.pricingCardPro]"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
           <div :class="$style.popularTag">POPULAR</div>
           <div>
             <div :class="$style.tierBadgePro">Pro Vendor</div>
@@ -90,6 +98,7 @@
 <style module>
 .pricingSection {
   padding: 5rem 1rem;
+  overflow: hidden;
 }
 
 .container {
@@ -125,14 +134,16 @@
 .pricingGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
   max-width: 50rem;
   margin: 0 auto;
+  padding-top: 0.75rem; /* Space for absolute popularTag badge */
 }
 
 @media (min-width: 768px) {
   .pricingGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
@@ -147,7 +158,7 @@
   border: 1px solid #1e293b;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-space: space-between;
 }
 
 .pricingCardPro {
@@ -167,6 +178,7 @@
   letter-spacing: 0.05em;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
+  z-index: 10;
 }
 
 /* Details */
@@ -231,6 +243,7 @@
 .btn {
   display: block;
   width: 100%;
+  box-sizing: border-box;
   text-align: center;
   font-weight: 700;
   padding: 0.875rem 1.25rem;

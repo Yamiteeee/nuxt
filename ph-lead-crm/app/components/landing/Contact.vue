@@ -33,11 +33,7 @@ const handleSubmit = () => {
 
       <div :class="$style.grid">
         <!-- Direct Quick Connect Channels -->
-        <div
-          :class="$style.infoCard"
-          data-aos="fade-right"
-          data-aos-delay="100"
-        >
+        <div :class="$style.infoCard" data-aos="fade-up" data-aos-delay="100">
           <div>
             <h3 :class="$style.infoTitle">Fast Support Channels</h3>
             <p :class="$style.infoDesc">
@@ -82,7 +78,7 @@ const handleSubmit = () => {
         </div>
 
         <!-- Contact Form -->
-        <div :class="$style.formCard" data-aos="fade-left" data-aos-delay="200">
+        <div :class="$style.formCard" data-aos="fade-up" data-aos-delay="150">
           <div v-if="isSubmitted" :class="$style.successBox">
             <Icon name="lucide:party-popper" :class="$style.successIcon" />
             <h4 :class="$style.successTitle">Message Sent!</h4>
@@ -177,6 +173,7 @@ const handleSubmit = () => {
   padding: 5rem 1rem;
   background-color: rgba(15, 23, 42, 0.6);
   border-top: 1px solid #1e293b;
+  overflow: hidden; /* Prevents AOS transform overflow */
 }
 
 .container {
@@ -230,7 +227,7 @@ const handleSubmit = () => {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-space: space-between;
 }
 
 .infoTitle {
@@ -349,6 +346,8 @@ const handleSubmit = () => {
 
 .input,
 .textarea {
+  width: 100%;
+  box-sizing: border-box;
   background-color: #020617;
   border: 1px solid #1e293b;
   border-radius: 0.5rem;

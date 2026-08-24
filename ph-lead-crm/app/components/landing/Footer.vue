@@ -21,17 +21,13 @@ import Logo from "./Logo.vue";
           <div :class="$style.colTitle">Product</div>
           <ul :class="$style.linkList">
             <li>
-              <NuxtLink to="#how-it-works" :class="$style.link">
-                How It Works
-              </NuxtLink>
+              <a href="#how-it-works" :class="$style.link"> How It Works </a>
             </li>
             <li>
-              <NuxtLink to="#pricing" :class="$style.link"> Pricing </NuxtLink>
+              <a href="#pricing" :class="$style.link"> Pricing </a>
             </li>
             <li>
-              <NuxtLink to="#contact" :class="$style.link">
-                Contact Support
-              </NuxtLink>
+              <a href="#contact" :class="$style.link"> Contact Support </a>
             </li>
           </ul>
         </div>
@@ -75,6 +71,7 @@ import Logo from "./Logo.vue";
   background-color: #020617;
   border-top: 1px solid #1e293b;
   padding: 4rem 1rem 2rem 1rem;
+  overflow: hidden; /* Prevents animation-induced scrollbars */
 }
 
 .container {

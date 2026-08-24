@@ -1,6 +1,6 @@
 <!-- app/components/landing/Header.vue -->
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import Logo from "./Logo.vue";
 
 const isMobileMenuOpen = ref(false);
@@ -8,6 +8,13 @@ const isMobileMenuOpen = ref(false);
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
 };
+
+// Prevent page background scroll when mobile menu is open
+watch(isMobileMenuOpen, (isOpen) => {
+  if (typeof window !== "undefined") {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  }
+});
 </script>
 
 <template>
@@ -18,11 +25,9 @@ const toggleMobileMenu = () => {
 
       <!-- Desktop Nav Links -->
       <nav :class="$style.desktopNav">
-        <NuxtLink to="#how-it-works" :class="$style.navLink"
-          >How It Works</NuxtLink
-        >
-        <NuxtLink to="#pricing" :class="$style.navLink">Pricing</NuxtLink>
-        <NuxtLink to="#contact" :class="$style.navLink">Contact</NuxtLink>
+        <a href="#how-it-works" :class="$style.navLink">How It Works</a>
+        <a href="#pricing" :class="$style.navLink">Pricing</a>
+        <a href="#contact" :class="$style.navLink">Contact</a>
       </nav>
 
       <!-- Desktop CTA Buttons -->
@@ -49,51 +54,51 @@ const toggleMobileMenu = () => {
       </button>
     </div>
 
-    <!-- Mobile Menu Drawer -->
-    <div
-      :class="[$style.mobileMenu, isMobileMenuOpen && $style.mobileMenuVisible]"
-    >
-      <nav :class="$style.mobileNav">
-        <NuxtLink
-          to="#how-it-works"
-          :class="$style.mobileNavLink"
-          @click="isMobileMenuOpen = false"
-        >
-          How It Works
-        </NuxtLink>
-        <NuxtLink
-          to="#pricing"
-          :class="$style.mobileNavLink"
-          @click="isMobileMenuOpen = false"
-        >
-          Pricing
-        </NuxtLink>
-        <NuxtLink
-          to="#contact"
-          :class="$style.mobileNavLink"
-          @click="isMobileMenuOpen = false"
-        >
-          Contact
-        </NuxtLink>
-        <div :class="$style.mobileActions">
-          <NuxtLink
-            to="/login"
-            :class="$style.loginBtn"
+    <!-- Mobile Menu Drawer (Fixed Overlay to Prevent Layout Lock) -->
+    <Transition name="fade-slide">
+      <div v-if="isMobileMenuOpen" :class="$style.mobileMenu">
+        <nav :class="$style.mobileNav">
+          <a
+            href="#how-it-works"
+            :class="$style.mobileNavLink"
             @click="isMobileMenuOpen = false"
           >
-            Log In
-          </NuxtLink>
-          <NuxtLink
-            to="/register"
-            :class="$style.signupBtn"
+            How It Works
+          </a>
+          <a
+            href="#pricing"
+            :class="$style.mobileNavLink"
             @click="isMobileMenuOpen = false"
           >
-            <span>Get Started</span>
-            <Icon name="lucide:arrow-right" :class="$style.btnIcon" />
-          </NuxtLink>
-        </div>
-      </nav>
-    </div>
+            Pricing
+          </a>
+          <a
+            href="#contact"
+            :class="$style.mobileNavLink"
+            @click="isMobileMenuOpen = false"
+          >
+            Contact
+          </a>
+          <div :class="$style.mobileActions">
+            <NuxtLink
+              to="/login"
+              :class="$style.loginBtn"
+              @click="isMobileMenuOpen = false"
+            >
+              Log In
+            </NuxtLink>
+            <NuxtLink
+              to="/register"
+              :class="$style.signupBtn"
+              @click="isMobileMenuOpen = false"
+            >
+              <span>Get Started</span>
+              <Icon name="lucide:arrow-right" :class="$style.btnIcon" />
+            </NuxtLink>
+          </div>
+        </nav>
+      </div>
+    </Transition>
   </header>
 </template>
 
@@ -101,7 +106,7 @@ const toggleMobileMenu = () => {
 .header {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 100;
   width: 100%;
   background-color: rgba(2, 6, 23, 0.85);
   backdrop-filter: blur(12px);
@@ -196,16 +201,17 @@ const toggleMobileMenu = () => {
   font-size: 1.5rem;
 }
 
-/* Mobile Nav Drawer */
+/* Mobile Nav Drawer overlay fixed position */
 .mobileMenu {
-  display: none;
-  background-color: #020617;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(2, 6, 23, 0.98);
   border-bottom: 1px solid #1e293b;
   padding: 1.5rem 1rem;
-}
-
-.mobileMenuVisible {
-  display: block;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
 }
 
 .mobileNav {

@@ -1,20 +1,9 @@
 <!-- app/components/landing/Hero.vue -->
-<script setup>
-import Logo from "./Logo.vue";
-</script>
+<script setup></script>
 
 <template>
   <section :class="$style.hero">
     <div :class="$style.container">
-      <!-- Visual Brand Graphic / Hero Badge -->
-      <div
-        :class="$style.logoWrapper"
-        data-aos="zoom-in"
-        data-aos-duration="500"
-      >
-        <Logo size="64px" />
-      </div>
-
       <!-- Tag Badge -->
       <div :class="$style.badge" data-aos="fade-down" data-aos-delay="100">
         <Icon name="twemoji:flag-philippines" :class="$style.flagIcon" />
@@ -67,31 +56,32 @@ import Logo from "./Logo.vue";
 
 <style module>
 .hero {
-  padding: 4rem 1rem 3.5rem 1rem;
+  min-height: calc(100vh - 65px);
+  min-height: calc(100dvh - 65px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
   background: radial-gradient(
-    circle at 50% 15%,
-    rgba(52, 211, 153, 0.12),
-    transparent 65%
+    circle at 50% 30%,
+    rgba(52, 211, 153, 0.15),
+    transparent 70%
   );
 }
 
 .container {
   max-width: 52rem;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-/* Logo Hero Graphic */
-.logoWrapper {
-  margin-bottom: 1.25rem;
-  padding: 0.75rem;
-  border-radius: 1.25rem;
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(51, 65, 85, 0.5);
-  backdrop-filter: blur(8px);
+  justify-content: center;
 }
 
 /* Badge */
@@ -177,6 +167,7 @@ import Logo from "./Logo.vue";
   border-radius: 0.75rem;
   font-size: 0.9375rem;
   text-decoration: none;
+  box-sizing: border-box;
   transition: all 0.2s ease;
 }
 

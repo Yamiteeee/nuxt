@@ -17,7 +17,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "InquiryTracker | Simple Lead Capture for Businesses",
+      title: "Inqri | Simple Lead Capture for Businesses",
       htmlAttrs: { lang: "en" },
       link: [
         { rel: "icon", type: "image/svg+xml", href: "/InquiryTrackerLogo.svg" },

@@ -34,7 +34,7 @@ watch(isMobileMenuOpen, (isOpen) => {
       <div :class="$style.desktopActions">
         <NuxtLink to="/login" :class="$style.loginBtn"> Log In </NuxtLink>
         <NuxtLink to="/register" :class="$style.signupBtn">
-          <span>Get Started</span>
+          <span>Get Started Free</span>
           <Icon name="lucide:arrow-right" :class="$style.btnIcon" />
         </NuxtLink>
       </div>
@@ -92,7 +92,7 @@ watch(isMobileMenuOpen, (isOpen) => {
               :class="$style.signupBtn"
               @click="isMobileMenuOpen = false"
             >
-              <span>Get Started</span>
+              <span>Get Started Free</span>
               <Icon name="lucide:arrow-right" :class="$style.btnIcon" />
             </NuxtLink>
           </div>

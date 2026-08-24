@@ -19,95 +19,64 @@ defineProps({
         height="100%"
       >
         <defs>
-          <linearGradient id="pmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#34d399" />
+          <linearGradient id="vectorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#22c55e" />
             <stop offset="100%" stop-color="#06b6d4" />
           </linearGradient>
-
-          <linearGradient id="bubbleBg" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#ffffff" />
-            <stop offset="100%" stop-color="#f8fafc" />
-          </linearGradient>
-
-          <filter id="pmGlow" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow
-              dx="0"
-              dy="10"
-              stdDeviation="14"
-              flood-color="#34d399"
-              flood-opacity="0.35"
-            />
-          </filter>
-
-          <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow
-              dx="0"
-              dy="6"
-              stdDeviation="8"
-              flood-color="#0f172a"
-              flood-opacity="0.12"
-            />
-          </filter>
         </defs>
 
+        <!-- Clean Vector Outer Ring -->
         <circle
           cx="256"
           cy="256"
           r="210"
-          stroke="url(#pmGrad)"
-          stroke-width="4"
-          stroke-dasharray="10 10"
-          opacity="0.4"
+          stroke="url(#vectorGrad)"
+          stroke-width="12"
+          stroke-dasharray="24 16"
+          opacity="0.3"
         />
 
-        <g filter="url(#cardShadow)">
-          <path
-            d="M120 140 C120 117.9 137.9 100 160 100 L320 100 C342.1 100 360 117.9 360 140 L360 220 C360 242.1 342.1 260 320 260 L240 260 L180 300 L195 260 L160 260 C137.9 260 120 242.1 120 220 Z"
-            fill="#e2e8f0"
-            opacity="0.85"
-          />
-        </g>
+        <!-- Flat Backdrop Chat Bubble -->
+        <path
+          d="M136 128 C136 101.5 157.5 80 184 80 L328 80 C354.5 80 376 101.5 376 128 L376 288 C376 314.5 354.5 336 328 336 L248 336 L176 392 L188 336 L184 336 C157.5 336 136 314.5 136 288 Z"
+          fill="#0f172a"
+        />
 
-        <g filter="url(#pmGlow)">
-          <path
-            d="M150 190 C150 167.9 167.9 150 190 150 L370 150 C392.1 150 410 167.9 410 190 L410 290 C410 312.1 392.1 330 370 330 L310 330 L240 380 L255 330 L190 330 C167.9 330 150 312.1 150 290 Z"
-            fill="url(#bubbleBg)"
-            stroke="#e2e8f0"
-            stroke-width="3"
-          />
-          <text
-            x="280"
-            y="260"
-            font-family="system-ui, -apple-system, sans-serif"
-            font-weight="900"
-            font-size="82"
-            fill="url(#pmGrad)"
-            text-anchor="middle"
-            letter-spacing="2"
-          >
-            PM
-          </text>
-          <circle cx="380" cy="320" r="22" fill="url(#pmGrad)" />
-          <path
-            d="M371 320L377 326L389 313"
-            stroke="#ffffff"
-            stroke-width="3.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </g>
+        <!-- Main Overlapping Foreground Bubble -->
+        <path
+          d="M168 160 C168 133.5 189.5 112 216 112 L360 112 C386.5 112 408 133.5 408 160 L408 320 C408 346.5 386.5 368 360 368 L296 368 L224 424 L236 368 L216 368 C189.5 368 168 346.5 168 320 Z"
+          fill="url(#vectorGrad)"
+        />
 
-        <g filter="url(#pmGlow)">
-          <circle cx="360" cy="130" r="28" fill="#ffffff" />
-          <circle cx="360" cy="130" r="20" fill="url(#pmGrad)" />
-          <circle cx="360" cy="130" r="7" fill="#ffffff" />
-        </g>
+        <!-- Bold Vector IQ Monogram -->
+        <text
+          x="288"
+          y="272"
+          font-family="'Outfit', system-ui, -apple-system, sans-serif"
+          font-weight="900"
+          font-size="110"
+          fill="#ffffff"
+          text-anchor="middle"
+          letter-spacing="-2"
+        >
+          IQ
+        </text>
+
+        <!-- Conversion Growth Arrow Badge (Top-Right) -->
+        <circle cx="380" cy="140" r="32" fill="#ffffff" />
+        <circle cx="380" cy="140" r="24" fill="#0f172a" />
+        <path
+          d="M370 150 L390 130 M390 130 H376 M390 130 V144"
+          stroke="#22c55e"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
       </svg>
     </div>
 
     <span :class="$style.brandText">
-      <span :class="$style.logoAccent">InquiryTracker</span>
-      <span :class="$style.logoBadge">PH</span>
+      <span :class="$style.logoAccent">Inqri</span>
     </span>
   </NuxtLink>
 </template>
@@ -128,29 +97,15 @@ defineProps({
 }
 
 .brandText {
+  font-family: "Outfit", sans-serif;
   font-weight: 800;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   display: flex;
   align-items: center;
-  gap: 0.375rem;
 }
 
 .logoAccent {
   color: #ffffff;
-  letter-spacing: -0.01em;
-}
-
-.logoBadge {
-  background: linear-gradient(
-    135deg,
-    rgba(52, 211, 153, 0.2),
-    rgba(6, 182, 212, 0.2)
-  );
-  border: 1px solid rgba(52, 211, 153, 0.4);
-  color: #34d399;
-  font-size: 0.75rem;
-  font-weight: 800;
-  padding: 0.125rem 0.375rem;
-  border-radius: 0.375rem;
+  letter-spacing: -0.02em;
 }
 </style>

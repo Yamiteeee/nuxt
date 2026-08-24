@@ -98,8 +98,7 @@
                 forms
               </li>
               <li :class="$style.featureItem">
-                <span :class="$style.checkIcon">✓</span> Remove "InquiryTracker"
-                branding
+                <span :class="$style.checkIcon">✓</span> Remove "Inqri" branding
               </li>
               <li :class="$style.featureItem">
                 <span :class="$style.checkIcon">✓</span> Stripe & PayPal deposit

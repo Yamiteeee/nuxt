@@ -179,6 +179,7 @@
 .highlight {
   /* Matching the image's vibrant emerald-green gradient */
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

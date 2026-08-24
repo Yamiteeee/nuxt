@@ -60,10 +60,7 @@ const handleSubmit = () => {
                 rel="noopener"
                 :class="[$style.channelBtn, $style.messengerBtn]"
               >
-                <Icon
-                  name="simple-icons:facebookmessenger"
-                  :class="$style.channelIcon"
-                />
+                <Icon name="simple-icons:messenger" />
                 <span>Message on FB Messenger</span>
               </a>
             </div>

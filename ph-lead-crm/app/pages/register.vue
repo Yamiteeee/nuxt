@@ -1,11 +1,11 @@
-<!-- app/pages/login.vue -->
+<!-- app/pages/register.vue -->
 <script setup>
 import { ref } from "vue";
 
 const email = ref("");
 const isSubmitted = ref(false);
 
-const handleNotify = () => {
+const handleSubscribe = () => {
   if (email.value.trim()) {
     isSubmitted.value = true;
     email.value = "";
@@ -28,15 +28,17 @@ const handleNotify = () => {
       <!-- Badge -->
       <div :class="$style.badge">
         <span :class="$style.badgeDot"></span>
-        <span>Beta Access</span>
+        <span>Early Access</span>
       </div>
 
       <!-- Main Headline -->
       <h1 :class="$style.title">
-        Portal Login <span :class="$style.gradientText">Coming Soon</span>
+        Registration is <span :class="$style.gradientText">Coming Soon</span>
       </h1>
 
-      <p :class="$style.subtitle">We are currently building the dashboard.</p>
+      <p :class="$style.subtitle">
+        We are currently building the registration portal.
+      </p>
 
       <!-- Back Link -->
       <NuxtLink to="/" :class="$style.backLink">
@@ -65,7 +67,7 @@ const handleNotify = () => {
     sans-serif;
 }
 
-/* Ambient Glows */
+/* Background Ambient Glows */
 .glowTop {
   position: absolute;
   top: -10%;
@@ -75,7 +77,7 @@ const handleNotify = () => {
   height: 500px;
   background: radial-gradient(
     circle,
-    rgba(6, 182, 212, 0.15) 0%,
+    rgba(34, 197, 94, 0.15) 0%,
     rgba(15, 23, 42, 0) 70%
   );
   pointer-events: none;
@@ -89,13 +91,13 @@ const handleNotify = () => {
   height: 400px;
   background: radial-gradient(
     circle,
-    rgba(34, 197, 94, 0.12) 0%,
+    rgba(6, 182, 212, 0.12) 0%,
     rgba(15, 23, 42, 0) 70%
   );
   pointer-events: none;
 }
 
-/* Glass Card */
+/* Glassmorphic Card */
 .card {
   position: relative;
   z-index: 10;
@@ -118,16 +120,16 @@ const handleNotify = () => {
   margin-bottom: 2rem;
 }
 
-/* Badge */
+/* Early Access Badge */
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.375rem 0.875rem;
   border-radius: 9999px;
-  background: rgba(6, 182, 212, 0.1);
-  border: 1px solid rgba(6, 182, 212, 0.25);
-  color: #38bdf8;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  color: #4ade80;
   font-size: 0.875rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -137,11 +139,11 @@ const handleNotify = () => {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #06b6d4;
-  box-shadow: 0 0 8px #06b6d4;
+  background-color: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
 }
 
-/* Typography */
+/* Headings */
 .title {
   font-size: 2.25rem;
   font-weight: 800;
@@ -164,7 +166,7 @@ const handleNotify = () => {
   margin-bottom: 2rem;
 }
 
-/* Form */
+/* Form Styles */
 .form {
   width: 100%;
   margin-bottom: 1.5rem;
@@ -198,8 +200,8 @@ const handleNotify = () => {
 }
 
 .input:focus {
-  border-color: #06b6d4;
-  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15);
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
 }
 
 .input::placeholder {
@@ -233,9 +235,9 @@ const handleNotify = () => {
   gap: 0.75rem;
   padding: 1rem 1.25rem;
   border-radius: 0.75rem;
-  background: rgba(6, 182, 212, 0.1);
-  border: 1px solid rgba(6, 182, 212, 0.3);
-  color: #38bdf8;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #4ade80;
   font-size: 0.925rem;
   margin-bottom: 1.5rem;
 }

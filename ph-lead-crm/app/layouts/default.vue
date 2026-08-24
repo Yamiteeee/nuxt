@@ -11,18 +11,16 @@
 
 <style module>
 .layout {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   width: 100%;
-  max-width: 100vw;
-  background-color: #020617;
-  color: #f8fafc;
-  overflow-x: hidden;
+  background-color: #f8fafc;
+  color: #0f172a;
 }
 
 .mainContent {
-  flex: 1;
   width: 100%;
+  min-height: calc(
+    100vh - 80px
+  ); /* Keeps footer at bottom without flex wrapper issues */
 }
 </style>

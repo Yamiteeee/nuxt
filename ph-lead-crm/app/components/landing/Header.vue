@@ -19,7 +19,7 @@ watch(isMobileMenuOpen, (isOpen) => {
 
 <template>
   <header :class="$style.header">
-    <div :class="$style.container" data-aos="fade-down" data-aos-duration="600">
+    <div :class="$style.container">
       <!-- Brand Logo -->
       <Logo size="32px" />
 
@@ -54,7 +54,7 @@ watch(isMobileMenuOpen, (isOpen) => {
       </button>
     </div>
 
-    <!-- Mobile Menu Drawer (Fixed Overlay to Prevent Layout Lock) -->
+    <!-- Mobile Menu Drawer -->
     <Transition name="fade-slide">
       <div v-if="isMobileMenuOpen" :class="$style.mobileMenu">
         <nav :class="$style.mobileNav">
@@ -103,6 +103,18 @@ watch(isMobileMenuOpen, (isOpen) => {
 </template>
 
 <style module>
+/* Keyframes for smooth entrance without breaking sticky positioning */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -111,6 +123,7 @@ watch(isMobileMenuOpen, (isOpen) => {
   background-color: rgba(15, 23, 42, 0.9);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid #1e293b;
+  animation: slideDown 0.5s ease-out forwards;
 }
 
 .container {

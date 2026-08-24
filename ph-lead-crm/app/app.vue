@@ -23,8 +23,10 @@ html,
 body {
   width: 100%;
   min-height: 100vh;
-  background-color: #020617;
-  color: #f8fafc;
+  /* background-color should probably be #f8fafc to match the new light theme body, 
+     while the header and footer provide the dark accents. I will set it to light. */
+  background-color: #f8fafc;
+  color: #0f172a;
   font-family:
     system-ui,
     -apple-system,
@@ -35,6 +37,11 @@ body {
     Ubuntu,
     Cantarell,
     sans-serif;
-  overflow-x: hidden;
+
+  /* ❌ REMOVE THIS LINE BELOW ❌ */
+  /* overflow-x: hidden; */
+
+  /* ✅ ADD THIS LINE BELOW INSTEAD ✅ */
+  overflow-x: visible; /* CSS default, ensures sticky works */
 }
 </style>

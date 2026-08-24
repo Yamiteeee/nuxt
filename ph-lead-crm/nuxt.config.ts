@@ -19,6 +19,9 @@ export default defineNuxtConfig({
     head: {
       title: "InquiryTracker PH | Simple Lead Capture for PH Local Businesses",
       htmlAttrs: { lang: "en" },
+      link: [
+        { rel: "icon", type: "image/svg+xml", href: "/InquiryTrackerLogo.svg" },
+      ],
     },
   },
 });

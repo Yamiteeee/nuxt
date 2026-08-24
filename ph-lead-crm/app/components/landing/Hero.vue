@@ -1,35 +1,46 @@
 <!-- app/components/landing/Hero.vue -->
+<script setup>
+import Logo from "./Logo.vue";
+</script>
+
 <template>
   <section :class="$style.hero">
     <div :class="$style.container">
+      <!-- Visual Brand Graphic / Hero Badge -->
+      <div
+        :class="$style.logoWrapper"
+        data-aos="zoom-in"
+        data-aos-duration="500"
+      >
+        <Logo size="64px" />
+      </div>
+
       <!-- Tag Badge -->
       <div :class="$style.badge" data-aos="fade-down" data-aos-delay="100">
         <Icon name="twemoji:flag-philippines" :class="$style.flagIcon" />
-        <span>Built for Local PH Vendors & Caterers</span>
+        <span>Built for PH Caterers, Photographers & Event Vendors</span>
       </div>
 
       <!-- Main Headline -->
       <h1 :class="$style.title" data-aos="fade-up" data-aos-delay="200">
-        Tired of losing
-        <span :class="$style.highlight">"PM Sent"</span>
-        leads in your FB & IG inbox?
+        Turn lost <span :class="$style.highlight">"PM Sent"</span> inquiries
+        into paid bookings.
       </h1>
 
-      <!-- Subtitle -->
+      <!-- Short, Punchy Subtitle -->
       <p :class="$style.subtitle" data-aos="fade-up" data-aos-delay="300">
-        Turn social media inquiries into booked deals. Put one custom link in
-        your bio, capture structured customer details, and reply instantly via
-        Viber or WhatsApp.
+        One bio link to capture event dates, budgets, and contact info—not
+        clutter. Reply directly on Viber or WhatsApp in seconds.
       </p>
 
       <!-- Action Buttons -->
       <div :class="$style.actions" data-aos="fade-up" data-aos-delay="400">
-        <a href="#pricing" :class="[$style.btn, $style.btnPrimary]">
-          Get Started for Free (20 Leads/mo)
-        </a>
+        <NuxtLink to="/register" :class="[$style.btn, $style.btnPrimary]">
+          <span>Start Free — 20 Leads/mo</span>
+          <Icon name="lucide:arrow-right" :class="$style.btnIcon" />
+        </NuxtLink>
         <a href="#how-it-works" :class="[$style.btn, $style.btnSecondary]">
           <span>See How It Works</span>
-          <Icon name="lucide:arrow-down" :class="$style.btnIcon" />
         </a>
       </div>
 
@@ -37,17 +48,17 @@
       <div :class="$style.trustRow" data-aos="fade-up" data-aos-delay="500">
         <div :class="$style.trustItem">
           <Icon name="lucide:zap" :class="$style.trustIcon" />
-          <span>Setup in 60 seconds</span>
+          <span>60-Sec Setup</span>
         </div>
         <div :class="$style.trustDivider">•</div>
         <div :class="$style.trustItem">
-          <Icon name="lucide:credit-card" :class="$style.trustIcon" />
-          <span>No Credit Card Needed</span>
+          <Icon name="lucide:shield-check" :class="$style.trustIcon" />
+          <span>No Credit Card</span>
         </div>
         <div :class="$style.trustDivider">•</div>
         <div :class="$style.trustItem">
           <Icon name="lucide:smartphone" :class="$style.trustIcon" />
-          <span>Mobile-Optimized</span>
+          <span>Viber & FB Ready</span>
         </div>
       </div>
     </div>
@@ -56,16 +67,16 @@
 
 <style module>
 .hero {
-  padding: 5rem 1rem 4rem 1rem;
+  padding: 4rem 1rem 3.5rem 1rem;
   background: radial-gradient(
-    circle at 50% 20%,
-    rgba(16, 185, 129, 0.08),
-    transparent 70%
+    circle at 50% 15%,
+    rgba(52, 211, 153, 0.12),
+    transparent 65%
   );
 }
 
 .container {
-  max-width: 56rem;
+  max-width: 52rem;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -73,19 +84,29 @@
   align-items: center;
 }
 
+/* Logo Hero Graphic */
+.logoWrapper {
+  margin-bottom: 1.25rem;
+  padding: 0.75rem;
+  border-radius: 1.25rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  backdrop-filter: blur(8px);
+}
+
 /* Badge */
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.375rem 0.875rem;
+  padding: 0.35rem 0.85rem;
   border-radius: 9999px;
   background-color: rgba(16, 185, 129, 0.1);
   border: 1px solid rgba(16, 185, 129, 0.25);
   color: #34d399;
   font-size: 0.8125rem;
   font-weight: 600;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .flagIcon {
@@ -98,33 +119,33 @@
   font-weight: 900;
   letter-spacing: -0.03em;
   color: #ffffff;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
 }
 
 @media (min-width: 768px) {
   .title {
-    font-size: 3.75rem;
+    font-size: 3.5rem;
   }
 }
 
 .highlight {
-  background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+  background: linear-gradient(135deg, #34d399 0%, #06b6d4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-  font-size: 1.125rem;
-  line-height: 1.6;
+  font-size: 1.0625rem;
+  line-height: 1.55;
   color: #94a3b8;
-  max-width: 42rem;
-  margin-bottom: 2.5rem;
+  max-width: 38rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
   .subtitle {
-    font-size: 1.25rem;
+    font-size: 1.1875rem;
   }
 }
 
@@ -132,10 +153,10 @@
 .actions {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.875rem;
   width: 100%;
-  max-width: 28rem;
-  margin-bottom: 3rem;
+  max-width: 26rem;
+  margin-bottom: 2.5rem;
 }
 
 @media (min-width: 640px) {
@@ -152,21 +173,21 @@
   justify-content: center;
   gap: 0.5rem;
   font-weight: 700;
-  padding: 1rem 1.75rem;
+  padding: 0.875rem 1.5rem;
   border-radius: 0.75rem;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .btnPrimary {
-  background-color: #10b981;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: #020617;
-  box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 8px 20px -4px rgba(16, 185, 129, 0.4);
 }
 
 .btnPrimary:hover {
-  background-color: #34d399;
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
   transform: translateY(-1px);
 }
 
@@ -182,7 +203,7 @@
 }
 
 .btnIcon {
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 /* Trust Bar */
@@ -193,8 +214,8 @@
   justify-content: center;
   gap: 0.75rem;
   color: #64748b;
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 0.8125rem;
+  font-weight: 600;
 }
 
 .trustItem {
@@ -204,7 +225,7 @@
 }
 
 .trustIcon {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   color: #34d399;
 }
 

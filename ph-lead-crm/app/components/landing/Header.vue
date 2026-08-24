@@ -1,6 +1,7 @@
 <!-- app/components/landing/Header.vue -->
 <script setup>
 import { ref } from "vue";
+import Logo from "./Logo.vue";
 
 const isMobileMenuOpen = ref(false);
 
@@ -13,23 +14,21 @@ const toggleMobileMenu = () => {
   <header :class="$style.header">
     <div :class="$style.container" data-aos="fade-down" data-aos-duration="600">
       <!-- Brand Logo -->
-      <NuxtLink to="/" :class="$style.logo">
-        <Icon name="lucide:layers" :class="$style.logoIcon" />
-        <span :class="$style.logoAccent">InquiryTracker</span>
-        <span :class="$style.logoBadge">PH</span>
-      </NuxtLink>
+      <Logo size="32px" />
 
       <!-- Desktop Nav Links -->
       <nav :class="$style.desktopNav">
-        <a href="#how-it-works" :class="$style.navLink">How It Works</a>
-        <a href="#pricing" :class="$style.navLink">Pricing</a>
-        <a href="#contact" :class="$style.navLink">Contact</a>
+        <NuxtLink to="#how-it-works" :class="$style.navLink"
+          >How It Works</NuxtLink
+        >
+        <NuxtLink to="#pricing" :class="$style.navLink">Pricing</NuxtLink>
+        <NuxtLink to="#contact" :class="$style.navLink">Contact</NuxtLink>
       </nav>
 
       <!-- Desktop CTA Buttons -->
       <div :class="$style.desktopActions">
         <NuxtLink to="/login" :class="$style.loginBtn"> Log In </NuxtLink>
-        <NuxtLink to="/login" :class="$style.signupBtn">
+        <NuxtLink to="/register" :class="$style.signupBtn">
           <span>Get Started</span>
           <Icon name="lucide:arrow-right" :class="$style.btnIcon" />
         </NuxtLink>
@@ -55,27 +54,27 @@ const toggleMobileMenu = () => {
       :class="[$style.mobileMenu, isMobileMenuOpen && $style.mobileMenuVisible]"
     >
       <nav :class="$style.mobileNav">
-        <a
-          href="#how-it-works"
+        <NuxtLink
+          to="#how-it-works"
           :class="$style.mobileNavLink"
           @click="isMobileMenuOpen = false"
         >
           How It Works
-        </a>
-        <a
-          href="#pricing"
+        </NuxtLink>
+        <NuxtLink
+          to="#pricing"
           :class="$style.mobileNavLink"
           @click="isMobileMenuOpen = false"
         >
           Pricing
-        </a>
-        <a
-          href="#contact"
+        </NuxtLink>
+        <NuxtLink
+          to="#contact"
           :class="$style.mobileNavLink"
           @click="isMobileMenuOpen = false"
         >
           Contact
-        </a>
+        </NuxtLink>
         <div :class="$style.mobileActions">
           <NuxtLink
             to="/login"
@@ -85,7 +84,7 @@ const toggleMobileMenu = () => {
             Log In
           </NuxtLink>
           <NuxtLink
-            to="/login"
+            to="/register"
             :class="$style.signupBtn"
             @click="isMobileMenuOpen = false"
           >
@@ -116,35 +115,6 @@ const toggleMobileMenu = () => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-/* Logo */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  font-weight: 800;
-  font-size: 1.25rem;
-  color: #ffffff;
-}
-
-.logoIcon {
-  font-size: 1.35rem;
-  color: #34d399;
-}
-
-.logoAccent {
-  color: #ffffff;
-}
-
-.logoBadge {
-  background-color: rgba(16, 185, 129, 0.15);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  color: #34d399;
-  font-size: 0.75rem;
-  padding: 0.125rem 0.375rem;
-  border-radius: 0.375rem;
 }
 
 /* Desktop Nav */

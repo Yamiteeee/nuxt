@@ -1,15 +1,15 @@
 <!-- app/components/landing/Footer.vue -->
+<script setup>
+import Logo from "./Logo.vue";
+</script>
+
 <template>
   <footer :class="$style.footer">
     <div :class="$style.container" data-aos="fade-up">
       <div :class="$style.grid">
         <!-- Brand Info -->
         <div :class="$style.brandCol">
-          <NuxtLink to="/" :class="$style.logo">
-            <Icon name="lucide:layers" :class="$style.logoIcon" />
-            <span :class="$style.logoAccent">InquiryTracker</span>
-            <span :class="$style.logoBadge">PH</span>
-          </NuxtLink>
+          <Logo size="32px" />
           <p :class="$style.brandDesc">
             Simple lead capture and instant notification workflow for local
             Philippine caterers, photographers, cake makers, and event vendors.
@@ -100,34 +100,6 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-
-.logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  font-weight: 800;
-  font-size: 1.125rem;
-  color: #ffffff;
-}
-
-.logoIcon {
-  font-size: 1.25rem;
-  color: #34d399;
-}
-
-.logoAccent {
-  color: #ffffff;
-}
-
-.logoBadge {
-  background-color: rgba(16, 185, 129, 0.15);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  color: #34d399;
-  font-size: 0.75rem;
-  padding: 0.125rem 0.375rem;
-  border-radius: 0.375rem;
 }
 
 .brandDesc {

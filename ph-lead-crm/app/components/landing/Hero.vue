@@ -20,8 +20,8 @@
 
         <!-- Short, Punchy Subtitle -->
         <p :class="$style.subtitle" data-aos="fade-up" data-aos-delay="300">
-          One bio link to capture event dates, budgets, and contact info—not
-          clutter. Reply directly on WhatsApp or chat in seconds.
+          Stop losing clients in the DMs. Collect event details instantly and
+          close deals straight on WhatsApp.
         </p>
 
         <!-- Action Buttons -->

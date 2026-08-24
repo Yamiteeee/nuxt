@@ -9,8 +9,15 @@
   </NuxtLayout>
 </template>
 
-<!-- Unscoped global styles for reset -->
+<!-- Unscoped global styles for reset and typography -->
 <style>
+:root {
+  --font-sans:
+    "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  --font-display: "Outfit", var(--font-sans);
+}
+
 *,
 *::before,
 *::after {
@@ -23,25 +30,29 @@ html,
 body {
   width: 100%;
   min-height: 100vh;
-  /* background-color should probably be #f8fafc to match the new light theme body, 
-     while the header and footer provide the dark accents. I will set it to light. */
   background-color: #f8fafc;
   color: #0f172a;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: visible;
+}
 
-  /* ❌ REMOVE THIS LINE BELOW ❌ */
-  /* overflow-x: hidden; */
+/* Make headings automatically use the high-impact display font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
 
-  /* ✅ ADD THIS LINE BELOW INSTEAD ✅ */
-  overflow-x: visible; /* CSS default, ensures sticky works */
+/* Ensure interactive controls inherit font settings */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
 }
 </style>

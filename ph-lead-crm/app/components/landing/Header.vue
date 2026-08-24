@@ -108,7 +108,7 @@ watch(isMobileMenuOpen, (isOpen) => {
   top: 0;
   z-index: 100;
   width: 100%;
-  background-color: rgba(2, 6, 23, 0.85);
+  background-color: rgba(15, 23, 42, 0.9);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid #1e293b;
 }
@@ -116,7 +116,7 @@ watch(isMobileMenuOpen, (isOpen) => {
 .container {
   max-width: 64rem;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -130,7 +130,7 @@ watch(isMobileMenuOpen, (isOpen) => {
 }
 
 .navLink {
-  color: #94a3b8;
+  color: #cbd5e1;
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;
@@ -138,7 +138,7 @@ watch(isMobileMenuOpen, (isOpen) => {
 }
 
 .navLink:hover {
-  color: #ffffff;
+  color: #22c55e;
 }
 
 .desktopActions {
@@ -148,7 +148,7 @@ watch(isMobileMenuOpen, (isOpen) => {
 }
 
 .loginBtn {
-  color: #cbd5e1;
+  color: #f8fafc;
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 600;
@@ -160,25 +160,29 @@ watch(isMobileMenuOpen, (isOpen) => {
 }
 
 .loginBtn:hover {
-  color: #ffffff;
+  color: #22c55e;
 }
 
 .signupBtn {
-  background-color: #10b981;
-  color: #020617;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 700;
   padding: 0.5rem 1.25rem;
   border-radius: 0.5rem;
-  transition: background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
 }
 
 .signupBtn:hover {
-  background-color: #34d399;
+  opacity: 0.95;
+  transform: translateY(-1px);
 }
 
 .btnIcon {
@@ -207,11 +211,11 @@ watch(isMobileMenuOpen, (isOpen) => {
   top: 100%;
   left: 0;
   right: 0;
-  background-color: rgba(2, 6, 23, 0.98);
+  background-color: rgba(15, 23, 42, 0.98);
   border-bottom: 1px solid #1e293b;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem;
   backdrop-filter: blur(16px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
 }
 
 .mobileNav {
@@ -225,6 +229,10 @@ watch(isMobileMenuOpen, (isOpen) => {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.mobileNavLink:hover {
+  color: #22c55e;
 }
 
 .mobileActions {

@@ -174,11 +174,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem 1rem;
+  padding: 4rem 1.5rem;
   box-sizing: border-box;
-  background-color: rgba(15, 23, 42, 0.6);
-  border-top: 1px solid #1e293b;
-  border-bottom: 1px solid #1e293b;
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .container {
@@ -192,13 +192,13 @@
 
 .headerGroup {
   text-align: center;
-  margin-bottom: 2.25rem;
+  margin-bottom: 2.5rem;
 }
 
 .sectionTitle {
   font-size: 1.875rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #0f172a;
   margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
 }
@@ -210,8 +210,8 @@
 }
 
 .sectionSubtitle {
-  color: #94a3b8;
-  font-size: 1rem;
+  color: #64748b;
+  font-size: 1.0625rem;
 }
 
 /* Comparison Grid */
@@ -229,30 +229,31 @@
 }
 
 .card {
-  padding: 1.5rem;
+  padding: 1.75rem;
   border-radius: 1.25rem;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
 }
 
 .cardDanger {
-  background-color: rgba(69, 10, 10, 0.15);
-  border: 1px solid rgba(127, 29, 29, 0.4);
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
 }
 
 .cardSuccess {
-  background-color: rgba(6, 78, 59, 0.15);
-  border: 1px solid rgba(6, 95, 70, 0.4);
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
 }
 
 .cardHeader {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .badgeDanger {
   display: inline-block;
-  background-color: rgba(239, 68, 68, 0.15);
-  color: #f87171;
+  background-color: #fee2e2;
+  color: #dc2626;
   font-size: 0.6875rem;
   font-weight: 800;
   letter-spacing: 0.05em;
@@ -263,8 +264,8 @@
 
 .badgeSuccess {
   display: inline-block;
-  background-color: rgba(16, 185, 129, 0.15);
-  color: #34d399;
+  background-color: #dcfce7;
+  color: #16a34a;
   font-size: 0.6875rem;
   font-weight: 800;
   letter-spacing: 0.05em;
@@ -274,7 +275,7 @@
 }
 
 .cardTitleDanger {
-  color: #fca5a5;
+  color: #991b1b;
   font-size: 1.125rem;
   font-weight: 700;
   display: flex;
@@ -283,7 +284,7 @@
 }
 
 .cardTitleSuccess {
-  color: #6ee7b7;
+  color: #166534;
   font-size: 1.125rem;
   font-weight: 700;
   display: flex;
@@ -292,13 +293,13 @@
 }
 
 .titleIconDanger {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: #ef4444;
 }
 
 .titleIconSuccess {
-  font-size: 1.125rem;
-  color: #10b981;
+  font-size: 1.25rem;
+  color: #16a34a;
 }
 
 .featureList {
@@ -307,46 +308,47 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.875rem;
 }
 
 .featureItem {
   display: flex;
   align-items: flex-start;
   gap: 0.625rem;
-  color: #cbd5e1;
-  font-size: 0.875rem;
-  line-height: 1.45;
+  color: #334155;
+  font-size: 0.9375rem;
+  line-height: 1.5;
 }
 
 .iconDanger {
-  color: #f87171;
-  font-size: 1rem;
+  color: #ef4444;
+  font-size: 1.125rem;
   flex-shrink: 0;
   margin-top: 0.125rem;
 }
 
 .iconSuccess {
-  color: #34d399;
-  font-size: 1rem;
+  color: #16a34a;
+  font-size: 1.125rem;
   flex-shrink: 0;
   margin-top: 0.125rem;
 }
 
 /* SaaS Workflow Section */
 .workflowWrapper {
-  background: rgba(30, 41, 59, 0.4);
-  border: 1px solid rgba(51, 65, 85, 0.6);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 1.25rem;
-  padding: 1.75rem 1.25rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.03);
 }
 
 .workflowHeading {
   text-align: center;
   font-size: 1.125rem;
-  font-weight: 700;
-  color: #f8fafc;
-  margin-bottom: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -363,16 +365,16 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
-    gap: 0.5rem;
+    gap: 0.75rem;
   }
 }
 
 .stepCard {
   flex: 1;
-  background: rgba(15, 23, 42, 0.7);
-  border: 1px solid rgba(51, 65, 85, 0.4);
-  border-radius: 0.875rem;
-  padding: 1.25rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -386,47 +388,47 @@
   left: 0.75rem;
   font-size: 0.6875rem;
   font-weight: 700;
-  color: #34d399;
-  background: rgba(16, 185, 129, 0.1);
-  padding: 0.125rem 0.5rem;
-  border-radius: 0.25rem;
+  color: #15803d;
+  background: #dcfce7;
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.375rem;
 }
 
 .stepIconWrapper {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
-  background: rgba(52, 211, 153, 0.1);
+  background: #dcfce7;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.875rem;
 }
 
 .stepIcon {
-  font-size: 1.25rem;
-  color: #34d399;
+  font-size: 1.35rem;
+  color: #16a34a;
 }
 
 .stepTitle {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: #0f172a;
   margin-bottom: 0.375rem;
 }
 
 .stepDesc {
-  font-size: 0.8125rem;
-  color: #94a3b8;
-  line-height: 1.4;
+  font-size: 0.8438rem;
+  color: #64748b;
+  line-height: 1.45;
 }
 
 .stepConnector {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #475569;
+  color: #cbd5e1;
 }
 
 @media (max-width: 767px) {

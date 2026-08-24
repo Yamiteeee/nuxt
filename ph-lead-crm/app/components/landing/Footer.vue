@@ -68,9 +68,9 @@ import Logo from "./Logo.vue";
 
 <style module>
 .footer {
-  background-color: #020617;
+  background-color: #0f172a;
   border-top: 1px solid #1e293b;
-  padding: 4rem 1rem 2rem 1rem;
+  padding: 4rem 1.5rem 2rem 1.5rem;
   overflow: hidden; /* Prevents animation-induced scrollbars */
 }
 
@@ -100,7 +100,7 @@ import Logo from "./Logo.vue";
 }
 
 .brandDesc {
-  color: #64748b;
+  color: #94a3b8;
   font-size: 0.875rem;
   line-height: 1.6;
   max-width: 24rem;
@@ -117,6 +117,7 @@ import Logo from "./Logo.vue";
   color: #f8fafc;
   font-size: 0.875rem;
   font-weight: 700;
+  letter-spacing: 0.025em;
 }
 
 .linkList {
@@ -132,11 +133,15 @@ import Logo from "./Logo.vue";
   color: #94a3b8;
   text-decoration: none;
   font-size: 0.875rem;
-  transition: color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+  display: inline-block;
 }
 
 .link:hover {
-  color: #34d399;
+  color: #22c55e;
+  transform: translateX(2px);
 }
 
 /* Bottom Bar */
@@ -146,7 +151,7 @@ import Logo from "./Logo.vue";
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-space: space-between;
   gap: 1rem;
 }
 

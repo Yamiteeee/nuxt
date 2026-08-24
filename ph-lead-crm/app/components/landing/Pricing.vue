@@ -97,8 +97,9 @@
 
 <style module>
 .pricingSection {
-  padding: 5rem 1rem;
+  padding: 5rem 1.5rem;
   overflow: hidden;
+  background-color: #ffffff;
 }
 
 .container {
@@ -114,7 +115,7 @@
 .sectionTitle {
   font-size: 1.875rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #0f172a;
   margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
 }
@@ -126,8 +127,8 @@
 }
 
 .sectionSubtitle {
-  color: #94a3b8;
-  font-size: 1rem;
+  color: #64748b;
+  font-size: 1.0625rem;
 }
 
 /* Grid */
@@ -151,46 +152,49 @@
 .card {
   padding: 2.25rem;
   border-radius: 1.25rem;
-  background-color: #0f172a;
+  background-color: #f8fafc;
 }
 
 .pricingCard {
-  border: 1px solid #1e293b;
+  border: 1px solid #e2e8f0;
   display: flex;
   flex-direction: column;
-  justify-space: space-between;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
 }
 
 .pricingCardPro {
-  background: linear-gradient(180deg, #0f172a 0%, rgba(6, 78, 59, 0.25) 100%);
-  border: 2px solid #10b981;
+  background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+  border: 2px solid #22c55e;
   position: relative;
+  box-shadow: 0 20px 25px -5px rgba(34, 197, 94, 0.1);
 }
 
 .popularTag {
   position: absolute;
   top: -0.75rem;
   right: 1.5rem;
-  background-color: #10b981;
-  color: #020617;
+  background-color: #22c55e;
+  color: #ffffff;
   font-size: 0.6875rem;
   font-weight: 800;
   letter-spacing: 0.05em;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   z-index: 10;
+  box-shadow: 0 2px 4px rgba(34, 197, 94, 0.2);
 }
 
 /* Details */
 .tierBadge {
-  color: #94a3b8;
+  color: #64748b;
   font-weight: 700;
   font-size: 1.125rem;
   margin-bottom: 0.5rem;
 }
 
 .tierBadgePro {
-  color: #34d399;
+  color: #16a34a;
   font-weight: 700;
   font-size: 1.125rem;
   margin-bottom: 0.5rem;
@@ -199,7 +203,7 @@
 .price {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #ffffff;
+  color: #0f172a;
   margin-bottom: 0.75rem;
 }
 
@@ -210,7 +214,7 @@
 }
 
 .tierDescription {
-  color: #94a3b8;
+  color: #475569;
   font-size: 0.875rem;
   margin-bottom: 1.75rem;
   line-height: 1.5;
@@ -230,12 +234,12 @@
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  color: #cbd5e1;
+  color: #334155;
   font-size: 0.875rem;
 }
 
 .checkIcon {
-  color: #10b981;
+  color: #16a34a;
   font-weight: 900;
 }
 
@@ -254,21 +258,26 @@
 }
 
 .btnPrimary {
-  background-color: #10b981;
-  color: #020617;
-  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.2);
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 20px -4px rgba(34, 197, 94, 0.4);
 }
 
 .btnPrimary:hover {
-  background-color: #34d399;
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  transform: translateY(-1px);
 }
 
 .btnSecondary {
-  background-color: #1e293b;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .btnSecondary:hover {
-  background-color: #334155;
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
 }
 </style>

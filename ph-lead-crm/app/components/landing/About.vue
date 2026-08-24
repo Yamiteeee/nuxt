@@ -5,11 +5,11 @@
       <!-- Section Header -->
       <div :class="$style.headerGroup" data-aos="fade-up">
         <h2 :class="$style.sectionTitle">
-          Why PH Service Vendors Lose Revenue
+          Why Event Service Vendors Lose Revenue
         </h2>
         <p :class="$style.sectionSubtitle">
-          The manual FB & IG DM routine costs you booked clients every single
-          day.
+          The manual social media DM routine costs you booked clients every
+          single day.
         </p>
       </div>
 
@@ -32,20 +32,22 @@
             <li :class="$style.featureItem">
               <Icon name="lucide:x" :class="$style.iconDanger" />
               <span
-                >Customers send vague <i>"HM po?"</i> inquiries without
+                >Customers send vague <i>"How much?"</i> inquiries without
                 details.</span
               >
             </li>
             <li :class="$style.featureItem">
               <Icon name="lucide:x" :class="$style.iconDanger" />
               <span
-                >You waste 15 minutes asking for event dates, locations, and
-                specs.</span
+                >You waste 15 minutes back-and-forth asking for dates,
+                locations, and specs.</span
               >
             </li>
             <li :class="$style.featureItem">
               <Icon name="lucide:x" :class="$style.iconDanger" />
-              <span>Inquiries get buried under personal chats and spam.</span>
+              <span
+                >Inquiries get buried under personal messages and spam.</span
+              >
             </li>
             <li :class="$style.featureItem">
               <Icon name="lucide:x" :class="$style.iconDanger" />
@@ -70,7 +72,7 @@
                 name="lucide:check-circle"
                 :class="$style.titleIconSuccess"
               />
-              <span>The InquiryTracker PH Link</span>
+              <span>The Dedicated Inquiry Link</span>
             </h3>
           </div>
           <ul :class="$style.featureList">
@@ -84,8 +86,8 @@
             <li :class="$style.featureItem">
               <Icon name="lucide:check" :class="$style.iconSuccess" />
               <span
-                >You instantly get complete details (Date, Pax, Location,
-                Service).</span
+                >You instantly get complete details (Date, Guest Count,
+                Location, Service).</span
               >
             </li>
             <li :class="$style.featureItem">
@@ -98,7 +100,7 @@
             <li :class="$style.featureItem">
               <Icon name="lucide:check" :class="$style.iconSuccess" />
               <span
-                >1-click Viber or WhatsApp button opens a direct chat with
+                >1-click WhatsApp or Chat button opens a direct message with a
                 quote.</span
               >
             </li>
@@ -106,59 +108,103 @@
         </div>
       </div>
 
-      <!-- Live SaaS Workflow Pipeline -->
+      <!-- Enhanced Live Workflow Steps with Unsplash Visuals -->
       <div
         :class="$style.workflowWrapper"
         data-aos="fade-up"
         data-aos-delay="300"
       >
-        <h3 :class="$style.workflowHeading">How The Automation Flow Works</h3>
-        <div :class="$style.workflowGrid">
-          <!-- Step 1 -->
-          <div :class="$style.stepCard">
-            <div :class="$style.stepBadge">Step 1</div>
-            <div :class="$style.stepIconWrapper">
-              <Icon name="lucide:link" :class="$style.stepIcon" />
-            </div>
-            <h4 :class="$style.stepTitle">Share Your Link</h4>
-            <p :class="$style.stepDesc">
-              Put your personalized form link in your FB page, IG bio, or
-              auto-reply.
-            </p>
-          </div>
+        <h3 :class="$style.workflowHeading">The Modern Client Journey</h3>
 
-          <div :class="$style.stepConnector">
-            <Icon name="lucide:chevron-right" :class="$style.connectorIcon" />
+        <div :class="$style.workflowSteps">
+          <!-- Step 1 -->
+          <div :class="$style.stepRow" data-aos="fade-up">
+            <div :class="$style.stepContent">
+              <div :class="$style.stepHeader">
+                <span :class="$style.stepNumber">1</span>
+                <Icon name="lucide:link" :class="$style.stepTitleIcon" />
+                <h4 :class="$style.stepTitle">Share Your Link Everywhere</h4>
+              </div>
+              <p :class="$style.stepDesc">
+                Transform your Instagram bio, Facebook page, and auto-replies
+                into an active booking channel. Instead of getting stuck in
+                endless "How much?" message chains, direct clients straight to
+                your customized link.
+              </p>
+            </div>
+
+            <div :class="$style.imageSlotWrapper">
+              <div :class="$style.imageSlot">
+                <img
+                  src="https://images.unsplash.com/vector-1786329856157-0289f0ec1fe1?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Social media link sharing on mobile"
+                  :class="$style.stepImage"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
 
           <!-- Step 2 -->
-          <div :class="$style.stepCard">
-            <div :class="$style.stepBadge">Step 2</div>
-            <div :class="$style.stepIconWrapper">
-              <Icon name="lucide:file-text" :class="$style.stepIcon" />
+          <div :class="$style.stepRow" data-aos="fade-up">
+            <div :class="$style.stepContent">
+              <div :class="$style.stepHeader">
+                <span :class="$style.stepNumber">2</span>
+                <Icon name="lucide:file-text" :class="$style.stepTitleIcon" />
+                <h4 :class="$style.stepTitle">
+                  Receive Complete Event Details
+                </h4>
+              </div>
+              <p :class="$style.stepDesc">
+                Clients fill out a seamless 30-second mobile form. You receive
+                guest counts, event dates, locations, and specific service
+                preferences delivered straight into your dashboard with zero
+                effort.
+              </p>
             </div>
-            <h4 :class="$style.stepTitle">Capture Structured Leads</h4>
-            <p :class="$style.stepDesc">
-              Clients input event dates, guest count, location, and specific
-              service needs.
-            </p>
-          </div>
 
-          <div :class="$style.stepConnector">
-            <Icon name="lucide:chevron-right" :class="$style.connectorIcon" />
+            <div :class="$style.imageSlotWrapper">
+              <div :class="$style.imageSlot">
+                <img
+                  src="https://images.unsplash.com/vector-1786329854419-7ff5aedc0a95?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Client filling out digital form on mobile"
+                  :class="$style.stepImage"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
 
           <!-- Step 3 -->
-          <div :class="$style.stepCard">
-            <div :class="$style.stepBadge">Step 3</div>
-            <div :class="$style.stepIconWrapper">
-              <Icon name="lucide:message-circle" :class="$style.stepIcon" />
+          <div :class="$style.stepRow" data-aos="fade-up">
+            <div :class="$style.stepContent">
+              <div :class="$style.stepHeader">
+                <span :class="$style.stepNumber">3</span>
+                <Icon
+                  name="lucide:message-square"
+                  :class="$style.stepTitleIcon"
+                />
+                <h4 :class="$style.stepTitle">
+                  Instant 1-Click WhatsApp & Chat Quotes
+                </h4>
+              </div>
+              <p :class="$style.stepDesc">
+                Review lead details on the fly and tap a single button to launch
+                a direct chat. Send pre-populated, tailored quotes in seconds
+                before your prospective client browses anywhere else.
+              </p>
             </div>
-            <h4 :class="$style.stepTitle">1-Click Viber / WhatsApp</h4>
-            <p :class="$style.stepDesc">
-              Hit respond to open a pre-filled quote straight in Viber or
-              WhatsApp.
-            </p>
+
+            <div :class="$style.imageSlotWrapper">
+              <div :class="$style.imageSlot">
+                <img
+                  src="https://images.unsplash.com/vector-1786329675758-e518b4201de8?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Sending instant client quotation on smartphone"
+                  :class="$style.stepImage"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -334,106 +380,132 @@
   margin-top: 0.125rem;
 }
 
-/* SaaS Workflow Section */
+/* Enhanced Workflow Section */
 .workflowWrapper {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 1.25rem;
-  padding: 2rem 1.5rem;
+  padding: 2.25rem 1.5rem;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.03);
 }
 
 .workflowHeading {
   text-align: center;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #0f172a;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2.5rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
-.workflowGrid {
+.workflowSteps {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  gap: 2.5rem;
 }
 
 @media (min-width: 768px) {
-  .workflowGrid {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 0.75rem;
+  .workflowSteps {
+    gap: 3.5rem;
   }
 }
 
-.stepCard {
-  flex: 1;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 1rem;
-  padding: 1.5rem 1.25rem;
+.stepRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .stepRow {
+    grid-template-columns: 1.2fr 1.5fr;
+    gap: 3.5rem;
+  }
+}
+
+.stepContent {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+}
+
+.stepHeader {
+  display: flex;
   align-items: center;
-  text-align: center;
-  position: relative;
+  gap: 0.875rem;
 }
 
-.stepBadge {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  color: #15803d;
-  background: #dcfce7;
-  padding: 0.15rem 0.5rem;
-  border-radius: 0.375rem;
-}
-
-.stepIconWrapper {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background: #dcfce7;
+.stepNumber {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0.5rem;
-  margin-bottom: 0.875rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #ffffff;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+  flex-shrink: 0;
 }
 
-.stepIcon {
+.stepTitleIcon {
   font-size: 1.35rem;
   color: #16a34a;
+  flex-shrink: 0;
 }
 
 .stepTitle {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #0f172a;
-  margin-bottom: 0.375rem;
 }
 
 .stepDesc {
-  font-size: 0.8438rem;
+  font-size: 0.9375rem;
   color: #64748b;
-  line-height: 1.45;
+  line-height: 1.65;
 }
 
-.stepConnector {
+/* Image Slots */
+.imageSlotWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .imageSlotWrapper {
+    align-items: flex-start;
+  }
+}
+
+.imageSlot {
+  width: 100%;
+  max-width: 32rem;
+  aspect-ratio: 16 / 9;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #cbd5e1;
+  padding: 1rem; /* Padding so illustration graphics don't hit borders */
+  box-sizing: border-box;
 }
 
-@media (max-width: 767px) {
-  .connectorIcon {
-    transform: rotate(90deg);
-  }
+.stepImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Scale down vector art inside container without cutting off edges */
+  object-position: center;
+  display: block;
 }
 </style>

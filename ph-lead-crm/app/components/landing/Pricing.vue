@@ -4,7 +4,7 @@
     <div :class="$style.container">
       <!-- Section Header -->
       <div :class="$style.headerGroup" data-aos="fade-up">
-        <h2 :class="$style.sectionTitle">Simple Local Pricing</h2>
+        <h2 :class="$style.sectionTitle">Simple Transparent Pricing</h2>
         <p :class="$style.sectionSubtitle">
           Start 100% free with no credit card required. Upgrade as your business
           grows.
@@ -20,13 +20,23 @@
           data-aos-delay="100"
         >
           <div>
+            <!-- Image Slot with Unsplash Image -->
+            <div :class="$style.imageWrapper">
+              <img
+                src="https://images.unsplash.com/vector-1741240041535-9a1d6d945c93?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Home baker preparing order"
+                :class="$style.cardImage"
+                loading="lazy"
+              />
+            </div>
+
             <div :class="$style.tierBadge">Free Starter</div>
             <div :class="$style.price">
-              ₱0 <span :class="$style.pricePeriod">/ forever</span>
+              $0 <span :class="$style.pricePeriod">/ forever</span>
             </div>
             <p :class="$style.tierDescription">
-              Ideal for home bakers, solo caterers, and new vendors getting
-              started.
+              Ideal for independent creators, solo caterers, and new vendors
+              getting started.
             </p>
             <ul :class="$style.featureList">
               <li :class="$style.featureItem">
@@ -38,8 +48,8 @@
                 Form
               </li>
               <li :class="$style.featureItem">
-                <span :class="$style.checkIcon">✓</span> 1-Click Viber &
-                WhatsApp buttons
+                <span :class="$style.checkIcon">✓</span> 1-Click WhatsApp &
+                Direct Chat buttons
               </li>
               <li :class="$style.featureItem">
                 <span :class="$style.checkIcon">✓</span> Mobile-friendly lead
@@ -60,12 +70,23 @@
         >
           <div :class="$style.popularTag">POPULAR</div>
           <div>
+            <!-- Image Slot with Unsplash Image -->
+            <div :class="$style.imageWrapper">
+              <img
+                src="https://images.unsplash.com/vector-1769600501932-672671c4576f?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Professional event catering setup"
+                :class="$style.cardImage"
+                loading="lazy"
+              />
+            </div>
+
             <div :class="$style.tierBadgePro">Pro Vendor</div>
             <div :class="$style.price">
-              ₱499 <span :class="$style.pricePeriod">/ month</span>
+              $9 <span :class="$style.pricePeriod">/ month</span>
             </div>
             <p :class="$style.tierDescription">
-              For established PH vendors handling high inquiry volume.
+              For growing service providers and businesses handling high inquiry
+              volume.
             </p>
             <ul :class="$style.featureList">
               <li :class="$style.featureItem">
@@ -81,8 +102,8 @@
                 branding
               </li>
               <li :class="$style.featureItem">
-                <span :class="$style.checkIcon">✓</span> GCash & Maya payment
-                setup
+                <span :class="$style.checkIcon">✓</span> Stripe & PayPal deposit
+                integration
               </li>
             </ul>
           </div>
@@ -183,6 +204,30 @@
   border-radius: 9999px;
   z-index: 10;
   box-shadow: 0 2px 4px rgba(34, 197, 94, 0.2);
+}
+
+/* Card Images */
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.875rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  box-sizing: border-box;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
 }
 
 /* Details */

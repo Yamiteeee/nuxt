@@ -12,7 +12,7 @@ import Logo from "./Logo.vue";
           <Logo size="32px" />
           <p :class="$style.brandDesc">
             Simple lead capture and instant notification workflow for local
-            Philippine caterers, photographers, cake makers, and event vendors.
+            caterers, photographers, cake makers, and event vendors worldwide.
           </p>
         </div>
 
@@ -53,13 +53,11 @@ import Logo from "./Logo.vue";
       <!-- Bottom Bar -->
       <div :class="$style.bottomBar">
         <div :class="$style.copyright">
-          © {{ new Date().getFullYear() }} InquiryTracker PH. All rights
-          reserved.
+          © {{ new Date().getFullYear() }} InquiryTracker. All rights reserved.
         </div>
         <div :class="$style.locationTag">
-          <span>🇵🇭</span> Made with
-          <Icon name="lucide:heart" :class="$style.heartIcon" />
-          for PH Local Businesses
+          <Icon name="lucide:globe" :class="$style.globeIcon" />
+          Streamlining bookings globally
         </div>
       </div>
     </div>
@@ -151,7 +149,7 @@ import Logo from "./Logo.vue";
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-space: space-between;
+  justify-content: space-between;
   gap: 1rem;
 }
 
@@ -174,9 +172,8 @@ import Logo from "./Logo.vue";
   font-size: 0.8125rem;
 }
 
-.heartIcon {
+.globeIcon {
   font-size: 0.875rem;
-  color: #ef4444;
-  display: inline-block;
+  color: #94a3b8;
 }
 </style>

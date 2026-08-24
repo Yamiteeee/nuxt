@@ -8,20 +8,20 @@
       <div :class="$style.contentCol">
         <!-- Tag Badge -->
         <div :class="$style.badge" data-aos="fade-down" data-aos-delay="100">
-          <Icon name="twemoji:flag-philippines" :class="$style.flagIcon" />
-          <span>Built for PH Caterers, Photographers & Event Vendors</span>
+          <Icon name="lucide:globe" :class="$style.flagIcon" />
+          <span>Built for Caterers, Photographers & Event Vendors</span>
         </div>
 
         <!-- Main Headline -->
         <h1 :class="$style.title" data-aos="fade-up" data-aos-delay="200">
-          Turn lost <span :class="$style.highlight">"PM Sent"</span> inquiries
+          Turn lost <span :class="$style.highlight">"DM sent"</span> inquiries
           into paid bookings.
         </h1>
 
         <!-- Short, Punchy Subtitle -->
         <p :class="$style.subtitle" data-aos="fade-up" data-aos-delay="300">
           One bio link to capture event dates, budgets, and contact info—not
-          clutter. Reply directly on Viber or WhatsApp in seconds.
+          clutter. Reply directly on WhatsApp or chat in seconds.
         </p>
 
         <!-- Action Buttons -->
@@ -49,7 +49,7 @@
           <div :class="$style.trustDivider">•</div>
           <div :class="$style.trustItem">
             <Icon name="lucide:smartphone" :class="$style.trustIcon" />
-            <span>Viber & FB Ready</span>
+            <span>Chat & Social Ready</span>
           </div>
         </div>
       </div>
@@ -72,6 +72,18 @@
         </div>
       </div>
     </div>
+
+    <!-- Scroll Indicator Mouse Animation -->
+    <div
+      :class="$style.scrollIndicator"
+      data-aos="fade-up"
+      data-aos-delay="600"
+      data-aos-anchor-placement="top-bottom"
+    >
+      <div :class="$style.mouse">
+        <div :class="$style.wheel"></div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -83,7 +95,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 1.5rem;
+  padding: 4rem 1.5rem 6rem 1.5rem; /* Increased bottom padding for the indicator */
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
@@ -352,5 +364,57 @@
   border-radius: 50%;
   background-color: #22c55e;
   box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+}
+
+/* Scroll Indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.scrollIndicator:hover {
+  opacity: 1;
+}
+
+.mouse {
+  width: 20px;
+  height: 32px;
+  border: 2px solid #64748b;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.wheel {
+  width: 2px;
+  height: 6px;
+  background-color: #64748b;
+  border-radius: 1px;
+  position: absolute;
+  top: 6px;
+  animation: scrollWheel 1.5s infinite;
+}
+
+@keyframes scrollWheel {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 }
 </style>

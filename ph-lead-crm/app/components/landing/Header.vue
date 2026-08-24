@@ -103,7 +103,6 @@ watch(isMobileMenuOpen, (isOpen) => {
 </template>
 
 <style module>
-/* Keyframes for smooth entrance without breaking sticky positioning */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -124,6 +123,7 @@ watch(isMobileMenuOpen, (isOpen) => {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid #1e293b;
   animation: slideDown 0.5s ease-out forwards;
+  font-family: inherit;
 }
 
 .container {
@@ -135,7 +135,6 @@ watch(isMobileMenuOpen, (isOpen) => {
   justify-content: space-between;
 }
 
-/* Desktop Nav */
 .desktopNav {
   display: none;
   align-items: center;
@@ -202,7 +201,6 @@ watch(isMobileMenuOpen, (isOpen) => {
   font-size: 1rem;
 }
 
-/* Mobile Toggle Button */
 .mobileMenuBtn {
   display: flex;
   align-items: center;
@@ -218,7 +216,6 @@ watch(isMobileMenuOpen, (isOpen) => {
   font-size: 1.5rem;
 }
 
-/* Mobile Nav Drawer overlay fixed position */
 .mobileMenu {
   position: absolute;
   top: 100%;
@@ -257,7 +254,6 @@ watch(isMobileMenuOpen, (isOpen) => {
   border-top: 1px solid #1e293b;
 }
 
-/* Breakpoints */
 @media (min-width: 768px) {
   .desktopNav,
   .desktopActions {

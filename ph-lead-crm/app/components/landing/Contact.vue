@@ -13,7 +13,7 @@ const form = ref({
 const isSubmitted = ref(false);
 
 const handleSubmit = () => {
-  // Logic to process inquiry submission
+  // Logic to process inquiry submission (e.g., API call)
   isSubmitted.value = true;
 };
 </script>
@@ -26,8 +26,8 @@ const handleSubmit = () => {
           Have Questions or Need Help Setting Up?
         </h2>
         <p :class="$style.sectionSubtitle">
-          We’re here to help you get your inquiry link set up in minutes. Reach
-          out directly or send us a message below.
+          We’re here to ensure your inquiry link is active in minutes. Connect
+          directly or send us a message below.
         </p>
       </div>
 
@@ -37,19 +37,22 @@ const handleSubmit = () => {
           <div>
             <h3 :class="$style.infoTitle">Fast Support Channels</h3>
             <p :class="$style.infoDesc">
-              Prefer talking directly? Message our local support team on your
-              favorite app:
+              Prefer talking directly? Message our dedicated support team on
+              your preferred global messenger:
             </p>
 
             <div :class="$style.contactLinks">
               <a
-                href="https://viber.com"
+                href="https://wa.me"
                 target="_blank"
                 rel="noopener"
-                :class="[$style.channelBtn, $style.viberBtn]"
+                :class="[$style.channelBtn, $style.whatsappBtn]"
               >
-                <Icon name="simple-icons:viber" :class="$style.channelIcon" />
-                <span>Chat via Viber</span>
+                <Icon
+                  name="simple-icons:whatsapp"
+                  :class="$style.channelIcon"
+                />
+                <span>Chat via WhatsApp</span>
               </a>
               <a
                 href="https://m.me"
@@ -69,11 +72,9 @@ const handleSubmit = () => {
           <div :class="$style.hoursBlock">
             <div :class="$style.hoursTitle">
               <Icon name="lucide:clock" :class="$style.hoursIcon" />
-              <span>Support Hours:</span>
+              <span>Support Hours (UTC):</span>
             </div>
-            <div :class="$style.hoursText">
-              Mon – Sat: 8:00 AM – 7:00 PM (PHT)
-            </div>
+            <div :class="$style.hoursText">Mon – Sat: 08:00 – 19:00 UTC</div>
           </div>
         </div>
 
@@ -83,19 +84,19 @@ const handleSubmit = () => {
             <Icon name="lucide:party-popper" :class="$style.successIcon" />
             <h4 :class="$style.successTitle">Message Sent!</h4>
             <p :class="$style.successText">
-              Salamat! We received your message and will reply to your phone or
-              email within 1 hour during support hours.
+              Thank you! We received your inquiry and will reply to your
+              preferred contact method within 1 hour during support hours.
             </p>
           </div>
 
           <form v-else @submit.prevent="handleSubmit" :class="$style.form">
             <div :class="$style.inputGroup">
-              <label for="name" :class="$style.label">Your Name</label>
+              <label for="name" :class="$style.label">Your Full Name</label>
               <input
                 id="name"
                 v-model="form.name"
                 type="text"
-                placeholder="Juan dela Cruz"
+                placeholder="Alex Carter"
                 required
                 :class="$style.input"
               />
@@ -109,7 +110,7 @@ const handleSubmit = () => {
                 id="businessName"
                 v-model="form.businessName"
                 type="text"
-                placeholder="e.g. Manila Events Catering"
+                placeholder="e.g. Cityside Catering"
                 required
                 :class="$style.input"
               />
@@ -118,13 +119,13 @@ const handleSubmit = () => {
             <div :class="$style.inputRow">
               <div :class="$style.inputGroup">
                 <label for="phone" :class="$style.label"
-                  >Mobile / Viber No.</label
+                  >Primary Contact Number</label
                 >
                 <input
                   id="phone"
                   v-model="form.phone"
                   type="tel"
-                  placeholder="09171234567"
+                  placeholder="+1 (555) 123-4567"
                   required
                   :class="$style.input"
                 />
@@ -136,7 +137,7 @@ const handleSubmit = () => {
                   id="email"
                   v-model="form.email"
                   type="email"
-                  placeholder="juan@gmail.com"
+                  placeholder="alex.carter@email.com"
                   required
                   :class="$style.input"
                 />
@@ -272,8 +273,8 @@ const handleSubmit = () => {
   transform: translateY(-1px);
 }
 
-.viberBtn {
-  background-color: #7360f2;
+.whatsappBtn {
+  background-color: #25d366; /* Clean WhatsApp Brand Green */
   color: #ffffff;
 }
 
